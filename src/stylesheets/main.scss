@@ -1,1 +1,248 @@
-// Your styles go here
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+// nav styling
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #000000;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+$transition-duration: 0.3s;
+$scale-factor: 1.2;
+
+nav > ul > li {
+    margin-left: 1rem;
+    list-style-type: none;
+    transition: transform $transition-duration, border-bottom $transition-duration;
+
+}
+
+li:hover {
+    transform: scale($scale-factor);
+  }
+
+nav > ul {
+    display: flex;
+}
+/* lets you seperate nav elements*/
+nav > ul > li:nth-child(4){
+    margin-left: auto;
+}
+
+nav {
+    grid-column:1 / span 1;
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+// hero section styling
+
+.hero {
+    grid-column: 1 / span 2;
+    background: #f2f2f2;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.hero > h1 {
+    font-size: 2rem;
+}
+
+.hero > p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.hero > a > button {
+    background-color: rgb(6, 79, 6);
+    color: #f2f2f2;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    margin: 1.5rem;
+}
+
+.hero > a > button:hover {
+    background-color: rgba(6, 79, 6, 0.418);
+    color: #174d17;
+    border: none;
+}
+
+// main section styling
+
+.new-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.new-products > div > a > img {
+    width: 300px;
+    height: 400px;
+}
+
+.new-products > div > button {
+    background-color: rgb(6, 79, 6);
+    color: #f2f2f2;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    margin: 1.5rem;
+    align-self: stretch;
+
+}
+
+.new-products > div > button:hover {
+    background-color: rgba(6, 79, 6, 0.418);
+    color: #174d17;
+    border: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+ul > li {
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.product1 {
+    grid-area: 4 / 1 / span 1 / span 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.product2 {
+    grid-area: 4 / 2 / span 1 / span 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.product3 {
+    grid-area: 4 / 3 / span 1 / span 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.product4 {
+    grid-area: 4 / 4 / span 1 / span 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+// other neat products section styling
+
+.neat-products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.neat-products > div > a > img {
+    width: 200px;
+    height: 250px;
+}
+
+.neat1, .neat2, .neat3, .neat4, .neat5, .neat6 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.neat-products > div > button {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(6, 79, 6);
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    margin: 1.5rem;
+    align-self: stretch;
+}
+.neat-products > div > button:hover {
+    background-color: rgb(6, 79, 6);
+    color: #f2f2f2;
+    border: none;
+}
+
+// top products section styling
+.top-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.top-products > .card > div > a > img {
+    width: 200px;
+    height: 200px;
+}
+
+#card1 {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+#card2 {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+#card3 {
+    grid-area: 4 / 3 / span 1 / span 1;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background: #f2f2f2;
+}
+
+// footer section styling
+
+footer {
+    background-color: rgb(6, 79, 6);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    color: white;
+}
+
+footer > .ftr-left {
+    grid-area: 1 / 1 / span 2 / span 2;
+}
+
+footer > .ftr-middle > div > a{
+    color: white;
+    text-decoration: none;
+}
+
+footer > .ftr-right > div > a{
+    color: white;
+    text-decoration: none;
+}
+
+footer > div:hover {
+    transform: scale($scale-factor);
+  }
